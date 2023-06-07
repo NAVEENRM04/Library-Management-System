@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+.bookcontainer {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+  
+  .bookcointainer  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .bookform-group {
+    margin-bottom: 10px;
+  }
+  
+  .bookcointainer label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .bookcointainer input[id="bookid"],
+  .bookcointainer input[id="bookDate"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .bookcointainer button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .bookcointainer button:hover {
+    background-color: #45a049;
+  }
+  .addbookdetails{
+    border-style: none;
+    background-color: rgba(72, 182, 182, 0.695);
+    border-radius: 10px;
+}
+.bookcontainer{
+    position: absolute;
+    top: 150px;
+    left: 470px;
+    border-radius: 10px;
+    height: 400px;
+    width: 400px;
+    border-style: solid white;
+    background-image: linear-gradient(to right top, #051937b1, #004d7aba, #008793, #00bf73d3, #a6eb12e1);
+}
+.bsubmit{
+    border-style: none;
+    background-color: #3dc942;
+    position: relative;
+    left: 120px;
+    top: 40px;
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.bsubmit:hover{
+    background: #4caf50;
+}
+.bookName{
+    width: 160px;
+    position: relative;
+    left: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+.bookId{
+    width: 160px;
+    position: relative;
+    left: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+.bookCat{
+    width: 160px;
+    position: relative;
+    left: 35px;
+    align-items: center;
+    justify-content: space-between;
+}
+.bookPrice{
+    width: 160px;
+    position: relative;
+    left: 57px;
+    align-items: center;
+    justify-content: space-between;
+}
+.bookDate{
+    width: 160px;
+    position: relative;
+    left: 90px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.authorName{
+    width: 160px;
+    position: relative;
+    left: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+.bookform-group{
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+.bookmain{
+    height: 91.900vh;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(to right top, #051937b2, #004d7a, #008793, #00bf72, #a8eb12);
+}

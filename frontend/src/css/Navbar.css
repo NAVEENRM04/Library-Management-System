@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+.container-fluid{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.nav-item:hover{
+    border-radius: 10px;
+    background-color:  #0c1022;
+    cursor: pointer;
+    color: aliceblue;
+}

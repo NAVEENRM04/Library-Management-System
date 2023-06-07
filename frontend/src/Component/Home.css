@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Anton&family=Bebas+Neue&family=Kenia&family=La+Belle+Aurore&family=Martian+Mono:wght@100&family=Zen+Dots&display=swap");
+.des {
+  text-align: center;
+  font-family: "Zen Dots", cursive;
+  font-weight: 800;
+  font-size: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  
+}
+.content {
+  width: 60%;
+  font-size: 30px;
+  padding: 10px;
+  font-family: "Kenia", cursive;
+  position: relative;
+  top: 60px;
+  float: right;
+
+}
+.homebody{
+  background-image: linear-gradient(to right top, #051937b1, #004d7aba, #008793, #00bf73d3, #a6eb12e1);
+  height: 100vh;
+}
