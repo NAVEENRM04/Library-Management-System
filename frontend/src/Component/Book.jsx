@@ -1,3 +1,5 @@
+
+
 import axios from 'axios';
 import React, { useState } from 'react';
 import { toast,ToastContainer } from 'react-toastify';
@@ -54,9 +56,9 @@ function Book() {
 
   return (
     <div className='bookmain'>
-    <div className="bookcontainer">
+    <div className="register-box">
         <ToastContainer
-        position="bottom-left"
+        position="top"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -69,65 +71,58 @@ function Book() {
         />
       <h2>Add a Book</h2>
       <form onSubmit={handleSubmit}>
-        <div className="bookform-group">
-          <label htmlFor="bookId">Book ID:</label>
-          <input
-            type="text"
-            id="bookId"
-            className='bookId'
-            value={bookId}
-            onChange={(e) => setBookId(e.target.value)}
-          />
+        <div className="user-box1">
+          <input type="text" value={bookId} onChange={(e) => setBookId(e.target.value)} required/>
+            <label>Book ID:</label>
         </div>
-        <div className="bookform-group">
-          <label htmlFor="bookName">Book Name:</label>
+        <div className="user-box1">
           <input
             type="text"
-            id="bookName"
-            className='bookName'
             value={bookName}
             onChange={(e) => setBookName(e.target.value)}
-          />
+            required
+            />
+            <label>Book Name:</label>
         </div>
-        <div className="bookform-group">
-          <label htmlFor="authorName">Author Name:</label>
+        <div className="user-box1">
           <input
             type="text"
-            id="authorName"
-            className='authorName'
             value={authorName}
             onChange={(e) => setAuthorName(e.target.value)}
-          />
+            required
+            />
+            <label>Author Name:</label>
         </div>
-        <div className="bookform-group">
-          <label htmlFor="bookCategory">Book Category:</label>
+        <div className="user-box1">
           <input
             type="text"
             id="bookCategory"
             className='bookCat'
             value={bookCategory}
             onChange={(e) => setBookCategory(e.target.value)}
+            required
           />
+          <label >Book Category:</label>
         </div>
-        <div className="bookform-group">
-          <label htmlFor="bookPrice">Book Price:</label>
+        <div className="user-box1">
           <input
             type="text"
             id="bookPrice"
             className='bookPrice'
             value={bookPrice}
             onChange={(e) => setBookPrice(e.target.value)}
+            required
           />
+          <label >Book Price:</label>
         </div>
-        <div className="bookform-group">
-          <label htmlFor="bookDate">Date:</label>
+        <div className="user-box1">
+          {/* <label>Date:</label> */}
           <input
             type="date"
             placeholder='yyyy-MM-dd'
-            id="bookDate"
-            className='bookDate'
             value={bookDate}
             onChange={(e) => setBookDate(e.target.value)}
+            required
             />
           
         </div>

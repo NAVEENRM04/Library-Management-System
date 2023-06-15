@@ -11,4 +11,5 @@ public interface signupServiceInt {
 	public void deleteData(int id);
 	public boolean signupuser(String user);
 	public boolean signupemail(String email);
+	public  List<signupEntity> getUserbyname(String username);
 }

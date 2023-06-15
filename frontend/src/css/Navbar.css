@@ -9,3 +9,12 @@
     cursor: pointer;
     color: aliceblue;
 }
+.nav-search{
+    position: relative;
+    left: 600px;
+}
+.nav-search-button{
+    
+    position: relative;
+    left: 600px;
+}

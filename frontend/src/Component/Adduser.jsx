@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Login.css";
 import { useState } from "react";
-import {  Link,useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -50,11 +50,10 @@ const handleEmail = (e) => {
   console.log(res.data);
   if(res.data===' signup successfull')
   {
-      toast.success("signup sucess");
-     setTimeout(()=>
-     {
-         navigate("/login/loginbyusername");
-     },2000) 
+      toast.success("User Added Successfully");
+      setUserName('');
+      setEmail('');
+      setPassword('');
   }
   else if(res.data==='Email & Username already exist'){
     toast.error("Email & Username already exist");
@@ -91,6 +90,7 @@ const handleEmail = (e) => {
           <i class="fa fa-user"></i>
           <input
             onChange={(handleUserName)}
+            value={username}
             type="text"
             placeholder="Username"
             class="input_text"
@@ -102,6 +102,7 @@ const handleEmail = (e) => {
           <i class="fa fa-email"></i>
           <input
             onChange={handleEmail}
+            value={email}
             type="text"
             placeholder="Email"
             class="input_text"

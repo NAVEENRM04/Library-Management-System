@@ -9,6 +9,9 @@ public interface bookServiceInt {
 	public void postBooksdata(booksEntity be);
 	public void updateBooksdata(booksEntity be);
 	public void deletebooksdata(int id);
-	public boolean book(String bookname);
+	public boolean bookname(String bookname);
+	public List<booksEntity> getBookbyname(String bookname);
+	
+	
 
 }

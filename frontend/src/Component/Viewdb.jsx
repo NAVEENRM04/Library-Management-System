@@ -2,6 +2,7 @@ import axios from 'axios'
 import Swal from 'sweetalert2';
 import React, { useEffect, useState } from 'react'
 import './Viewdb.css';
+import Navbar from '../Component/Navbar';
 
 const Viewdb = () => {
     const handleDelete=(id) =>{
@@ -9,6 +10,8 @@ const Viewdb = () => {
             console.log(response);
         })
     }
+    const [search,setSearch] = useState("");
+    
     const handleSubmit=(id) =>{
         Swal.fire({
             title: 'Are you sure?',
@@ -40,21 +43,37 @@ const Viewdb = () => {
     useEffect(() => {
         getBooks();
     }, [])
+    const getUsernameByName = async ()=>{
+        if(search!="")
+       { await axios.get(`http://localhost:8080/getbylib/${search}`).then((response) => {
+            console.log(response.data);
+            setBooks(response.data)
+        }).catch((error) => console.log(error))}
+        else{
+            getBooks();
+        }
+    }
+    useEffect(() => {
+        getUsernameByName();
+    }, [search])
+
 
 
     return (
-        <div className="tablepage">
-        <div className='fulltable'>
-            <table class="table">
+        <>
+        <Navbar setSearch={setSearch}/>
+        <div className="container">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">Book Name</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Actions</th>
+                        <th><h1>Id</h1></th>
+                        <th><h1>UserName</h1></th>
+                        <th><h1>BookName</h1></th>
+                        <th><h1>Date</h1></th>
+                        <th><h1>Delete</h1></th>
+                        
                     </tr>
                 </thead>
+
                 <tbody>
                     {books.map((book) => {
                         return (
@@ -63,16 +82,13 @@ const Viewdb = () => {
                                 <td>{book.username}</td>
                                 <td>{book.bookname}</td>
                                 <td>{book.date}</td>
-                                <td><button className='Action' onClick={()=>handleSubmit(book.sno)}>Delete</button></td>
+                                <td  className='Action' onClick={()=>handleSubmit(book.sno)}>click</td>
                             </tr>
-
                         )
-
                     })}
                 </tbody>
-            </table>
         </div>
-        </div>
+        </>
     )
 }
 

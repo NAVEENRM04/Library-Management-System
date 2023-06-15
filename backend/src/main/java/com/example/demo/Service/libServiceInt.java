@@ -8,4 +8,5 @@ public interface libServiceInt {
 	public List<libEntity> getLibdata();
 	public String postLibdata(libEntity le);
 	public void deleteLibdata(int id);
+	public  List<libEntity> getlibname(String username);
 }

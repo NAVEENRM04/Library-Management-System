@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.Entity.libEntity;
 import com.example.demo.Entity.signupEntity;
 import com.example.demo.repo.signupRepoInt;
 
@@ -47,6 +48,12 @@ public class signupService implements signupServiceInt {
 	public boolean signupemail(String email) {
 		// TODO Auto-generated method stub
 		return sri.existsByEmail(email);
+	}
+
+	@Override
+	public List<signupEntity> getUserbyname(String username) {
+		// TODO Auto-generated method stub
+		return sri.findByusernameContainingIgnoreCase(username);
 	}
 
 }

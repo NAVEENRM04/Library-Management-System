@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Userdetail")
+@Table(name="Userdetails")
 public class signupEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -20,6 +20,17 @@ public class signupEntity {
 	private String email;
 	@Column(name="password")
 	private String password;
+	public signupEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public signupEntity(int id, String username, String email, String password) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.email = email;
+		this.password = password;
+	}
 	public int getId() {
 		return id;
 	}
@@ -44,16 +55,7 @@ public class signupEntity {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public signupEntity(int id, String username, String email, String password) {
-		super();
-		this.id = id;
-		this.username = username;
-		this.email = email;
-		this.password = password;
-	}
-	public signupEntity() {
-		super();
-	}
+	
 	
 	
 	

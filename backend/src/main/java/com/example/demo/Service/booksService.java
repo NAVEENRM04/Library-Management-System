@@ -1,12 +1,15 @@
 package com.example.demo.Service;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.Entity.booksEntity;
+import com.example.demo.Entity.libEntity;
 import com.example.demo.repo.bookRepoInt;
+import com.example.demo.repo.libRepoInt;
 @Service
 public class booksService implements bookServiceInt {
 	@Autowired
@@ -39,15 +42,16 @@ public class booksService implements bookServiceInt {
 	}
 
 	@Override
-	public boolean book(String bookname) {
+	public boolean bookname(String bookname) {
 		// TODO Auto-generated method stub
 		return bri.existsByBookname(bookname);
 	}
 
-	
-
-
-
+	@Override
+	public List<booksEntity> getBookbyname(String bookname) {
+		// TODO Auto-generated method stub
+		return (List<booksEntity>) bri.findByBooknameContainingIgnoreCase(bookname);
+	}
 
 
 }

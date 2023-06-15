@@ -1,129 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
-.bookcontainer {
-    width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f2f2f2;
-    font-family: 'PT Sans Narrow', sans-serif;
-  }
-  
-  .bookcointainer  h2 {
-    margin-bottom: 20px;
-  }
-  
-  .bookform-group {
-    margin-bottom: 10px;
-  }
-  
-  .bookcointainer label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .bookcointainer input[id="bookid"],
-  .bookcointainer input[id="bookDate"] {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .bookcointainer button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .bookcointainer button:hover {
-    background-color: #45a049;
-  }
-  .addbookdetails{
-    border-style: none;
-    background-color: rgba(72, 182, 182, 0.695);
-    border-radius: 10px;
-}
-.bookcontainer{
-    position: absolute;
-    top: 150px;
-    left: 470px;
-    border-radius: 10px;
-    height: 400px;
-    width: 400px;
-    border-style: solid white;
-    background-image: linear-gradient(to right top, #051937b1, #004d7aba, #008793, #00bf73d3, #a6eb12e1);
-}
-.bsubmit{
-    border-style: none;
-    background-color: #3dc942;
-    position: relative;
-    left: 120px;
-    top: 40px;
-    width: 90px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 20px;
-}
-.bsubmit:hover{
-    background: #4caf50;
-}
-.bookName{
-    width: 160px;
-    position: relative;
-    left: 50px;
-    align-items: center;
-    justify-content: space-between;
-}
-.bookId{
-    width: 160px;
-    position: relative;
-    left: 70px;
-    align-items: center;
-    justify-content: space-between;
-}
-.bookCat{
-    width: 160px;
-    position: relative;
-    left: 35px;
-    align-items: center;
-    justify-content: space-between;
-}
-.bookPrice{
-    width: 160px;
-    position: relative;
-    left: 57px;
-    align-items: center;
-    justify-content: space-between;
-}
-.bookDate{
-    width: 160px;
-    position: relative;
-    left: 90px;
-    align-items: center;
-    justify-content: space-between;
+.register-box {
+  position: absolute;
+  top: 60%;
+  left: 78%;
+  width: 400px;
+  padding: 50px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.795);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(36, 36, 36, 0.671);
+  border-radius: 10px;
 }
 
-.authorName{
-    width: 160px;
-    position: relative;
-    left: 40px;
-    align-items: center;
-    justify-content: space-between;
+.register-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  font-size: 150%;
+  text-transform:uppercase ;
+  color: #12d4ee;
+  text-align: center;
 }
-.bookform-group{
-    position: relative;
-    left: 10px;
-    top: 10px;
+
+.logo h1
+{
+    max-width: 7em;
+    color: #ffffff;
+margin: 0;
+font-size: 13vh;
+margin-top: 15%;
+margin-left: 10%;
+font-weight:bolder;
+line-height: 1.2;
 }
-.bookmain{
-    height: 91.900vh;
-    width: 100%;
-    position: absolute;
-    background-image: linear-gradient(to right top, #051937b2, #004d7a, #008793, #00bf72, #a8eb12);
+
+.register-box .user-box1 {
+  position: relative;
+  
+}
+
+
+.register-box .user-box1 input {
+  width: 100%;
+  padding: 4px 0;
+  font-size: 16px;
+  color: #00eeff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background: transparent;
+}
+.register-box .user-box1 label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  pointer-events: none;
+  transition: .5s;
+}
+.register-box .user-box1 input:focus ~ label,
+.register-box .user-box1 input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #e7f2f3;
+  font-size: 12px;
+}
+.register-box h3{
+  text-align: center;
+  /* text-size: ; */
+  color: white;
+  padding-top: 50px ;
+}
+
+
+.register-box form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+
+
+.register-box form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  color: #00eeff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .3s;
+  margin-top: 0px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  background-color: #030303;
+  border: 0px;
+}
+
+.register-box button:hover {
+  background: #030303;
+  color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 0 5px #00eeff,
+              0 0 25px #00eeff,
+              0 0 50px #00eeff,
+              0 0 100px#00eeff;
+}
+body{
+  background-image: url("../asserts/libback.jpg");
+  background-size:cover ;
+  /* background-position: center; */
+
+
+}
+.closebutton{
+  color: #ffffff;
 }

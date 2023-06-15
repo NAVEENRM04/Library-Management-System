@@ -4,14 +4,27 @@ import { useState } from "react";
 import {  useNavigate } from "react-router-dom";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
+import { auth, provider } from "./Firebase";
 import { toast, ToastContainer } from "react-toastify";
 
 export default function Login() {
 
 
   const [username, setUserName] = useState("");
+  const [user, setUser] = useState(null);
   const [password, setPassword] = useState("");
-  
+   
+  const googleLogin = async () => 
+  {
+    try {
+      await auth.signInWithPopup(provider);
+      setUser(await auth.currentUser);
+    } catch (err) {
+      console.log(err);
+    }
+    console.log(user);
+    navigate("/home");
+  };
  
   const navigate = useNavigate();
   
@@ -94,6 +107,10 @@ export default function Login() {
         </div>
         <div onClick={handleSubmit} class="button_group" id="login_button">
           <a>Submit</a>
+        </div>
+
+        <div onClick={googleLogin} class="button_group" id="google_button">
+          <a>Login with Google</a>
         </div>
       </div>
     </div>

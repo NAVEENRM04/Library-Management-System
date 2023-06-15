@@ -16,7 +16,7 @@ export default function Database() {
 
 
     const navigate = useNavigate();
-
+    
     const handleUserName = (e) => {
         setUserName(e.target.value);
     };
@@ -55,6 +55,15 @@ export default function Database() {
                             footer: '<a href="">Why do I have this issue?</a>'
                           })
                     }
+                    else if(res.data==="Book is  Not available")
+                    {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Book Not Register!', 
+                            footer: '<a href="">Why do I have this issue?</a>'
+                          })
+                        }
                     else {
                         Swal.fire({
                             icon: 'error',
